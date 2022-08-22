@@ -310,7 +310,6 @@ body {
   justify-content: space-around;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  
 }
 
 .skill-box__skill {
@@ -399,6 +398,7 @@ body {
   position: relative;
   margin: 0 15px 20px;
   width: 85vw;
+
 }
 
 .portfolio__miniature-box:hover .portfolio__miniature-hidden,
@@ -473,6 +473,7 @@ body {
 
 .portfolio__miniature-img {
   width: 85vw;
+  height: 22vw;
   cursor: pointer;
   -webkit-box-shadow: 0 26px 44px -5px #2792ea;
   box-shadow: 0 26px 44px -5px #2792ea;
