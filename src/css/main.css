@@ -84,7 +84,7 @@ body {
 .header {
   min-height: 90vh;
   padding-top: 100px;
-  /* padding-bottom: 20px; */
+  padding-bottom: 20px;
   text-align: center;
   line-height: 11vw;
   font-size: 10vw;
