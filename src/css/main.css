@@ -3,14 +3,16 @@ body {
   height: 100vh;
   background-color: #FFFFFF;
   color: #FFFFFF;
-  font-family: comic-sans; /*Arial, Helvetica, sans-serif;*/
+  font-family: comic-sans;
+  /*Arial, Helvetica, sans-serif;*/
 }
 
 .container {
   min-height: 100vh;
   /*для прижания футера к низу экрана*/
-  background-color: #44555e;    /* #44555e */
-} 
+  background-color: #44555e;
+  /* #44555e */
+}
 
 .button {
   display: inline-block;
@@ -83,7 +85,7 @@ body {
 
 .header {
   min-height: 90vh;
-  padding-top: 150px;
+  padding-top: 160px;
   padding-bottom: 150px;
   text-align: center;
   line-height: 11vw;
@@ -92,11 +94,79 @@ body {
   background-size: cover;
 }
 
+.social-media {
+  position: absolute;
+  top: 10px;
+  transform: translateY(-10px);
+  width: 100%;
+  text-align: center;
+}
+
+.social-media-btn {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+  margin: 10px;
+  border-radius: 50%;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.315);
+  color: #2792ea;
+  overflow: hidden;
+  position: relative;
+  background-color:rgba(0, 0, 0, 0.815);
+}
+
+.social-media-btn i {
+  line-height: 40px;
+  font-size: 40px;
+  transition: 0.2s linear;
+  color: #f1f1f1;
+}
+
+.social-media-btn:hover i {
+  transform: scale(1.2);
+  color: #f1f1f1;
+}
+
+.social-media-btn::before {
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 120%;
+  background: #2792ea;
+  transform: rotate(45deg);
+  left: -110%;
+  top: 90%;
+}
+
+.social-media-btn:hover::before {
+  animation: aaa 0.7s 1;
+  top: -10%;
+  left: -10%;
+}
+
+@keyframes aaa {
+  0% {
+    left: -110%;
+    top: 90%;
+  }
+
+  50% {
+    left: 10%;
+    top: -30%;
+  }
+
+  100% {
+    left: -10%;
+    top: -10%;
+  }
+}
+
+
 @media screen and (min-width: 750px) {
   .header {
     line-height: 82px;
     font-size: 75px;
-    
+
   }
 }
 
@@ -110,77 +180,80 @@ body {
   margin-right: 20px;
   /* color: #2792ea; */
   font: normal small-caps 50px/40px comic-sans;
-  background-color: rgba(26, 143, 226, 0.4); 
-   /* padding: 5px;  */
-   border-radius: 40px;
+  background-color: rgba(26, 143, 226, 0.4);
+  /* padding: 5px;  */
+  border-radius: 40px;
   box-shadow: 0 10px 50px -5px #2792ea;
 }
-  .avatar {
-    position : relative;
-    /* width : 1100px; */
-    display : flex;
-    align-items : center;
-    justify-content : center;
-    /* flex-warp: warp; */
-    /* padding : 0px;  */
-    font-size: 18px; 
-    line-height: 20px;
-  }
-  
-  .avatar .card {
-    position: relative;
-    max-width : 500px;
-    height : 240px;  
-    background-color : rgba(6, 47, 79, 0.1);
-    margin : 30px 10px;
-    padding : 20px 15px;
-    display : flex;
-    flex-direction : column;
-    box-shadow : 0 5px 20px rgba(0,0,0,0.5);
-    transition : 0.3s ease-in-out;
-    border-radius : 15px;
-  }
-  .avatar .card:hover {
-    height : 320px;    
-  }
-  
-  
-  .avatar .card .image {
-    position : relative;
-    margin-left: 100px;
-    width : 260px;
-    height : 260px;
-    top : -40%;
-    /* left: 6px; */
-    background-color: rgba(26, 143, 226, 0.4); 
-    z-index : 1;
-    border-radius : 15px;
-  }
-  
-  .avatar .card .image img {
-    max-width : 100%;
-    /* border-radius : 15px; */
-    border-radius : 15px;
-  }
-  
-  .avatar .card .avatar_content {
-    position : relative;
-    top : -140px;
-    padding : 10px 15px;
-    color : #f4e8fd; /*#7bdcb6*/
-    text-align : center;
-    visibility : hidden;
-    opacity : 0;
-    transition : 0.3s ease-in-out;
-      
-  }
-  
-  .avatar .card:hover .avatar_content {
-     margin-top : 30px;
-     visibility : visible;
-     opacity : 1;
-     transition-delay: 0.2s;   
-  }
+
+.avatar {
+  position: relative;
+  /* width : 1100px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* flex-warp: warp; */
+  /* padding : 0px;  */
+  font-size: 18px;
+  line-height: 20px;
+}
+
+.avatar .card {
+  position: relative;
+  max-width: 500px;
+  height: 240px;
+  background-color: rgba(6, 47, 79, 0.1);
+  margin: 30px 10px;
+  padding: 20px 15px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  border-radius: 15px;
+}
+
+.avatar .card:hover {
+  height: 320px;
+}
+
+
+.avatar .card .image {
+  position: relative;
+  margin-left: 100px;
+  width: 260px;
+  height: 260px;
+  top: -40%;
+  /* left: 6px; */
+  background-color: rgba(26, 143, 226, 0.4);
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.avatar .card .image img {
+  max-width: 100%;
+  /* border-radius : 15px; */
+  border-radius: 15px;
+}
+
+.avatar .card .avatar_content {
+  position: relative;
+  top: -140px;
+  padding: 10px 15px;
+  color: #f4e8fd;
+  /*#7bdcb6*/
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+
+}
+
+.avatar .card:hover .avatar_content {
+  margin-top: 30px;
+  visibility: visible;
+  opacity: 1;
+  transition-delay: 0.2s;
+}
 
 
 .menu {
@@ -299,7 +372,7 @@ body {
 
 .skills__skills-box {
   margin: 4vw auto;
-  
+
 }
 
 .skills-box {
@@ -331,7 +404,7 @@ body {
 .skill-box__skill-img {
   width: 100px;
   height: 100px;
- 
+
 }
 
 .skill__certificates {
@@ -427,7 +500,7 @@ body {
 .portfolio__miniature-hidden {
   position: absolute;
   top: 0;
-  height: 87.3vw;
+  height: 87.3vh;
   padding: 4vw;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
@@ -473,7 +546,7 @@ body {
 
 .portfolio__miniature-img {
   width: 85vw;
-  height: 22vw;
+  height: 61vh;
   cursor: pointer;
   -webkit-box-shadow: 0 26px 44px -5px #2792ea;
   box-shadow: 0 26px 44px -5px #2792ea;
@@ -523,13 +596,13 @@ body {
 }
 
 .contacts__vcard {
-  margin: 4vw auto;
+  margin: 4vh auto;
 }
 
 .vcard {
   padding: 20px 10px;
   white-space: pre-line;
-  line-height: 8vw;
+  line-height: 6vh;
   font-size: 6vw;
   font-weight: normal;
   background-color: rgba(33, 33, 33, 0.7);
@@ -537,7 +610,7 @@ body {
 
 @media screen and (min-width: 410px) {
   .vcard {
-    line-height: 32px;
+    line-height: 35px;
     font-size: 25px;
   }
 }
@@ -549,8 +622,8 @@ body {
 }
 
 .vcard__name {
-  background-color: rgba(26, 143, 226, 0.35); */
-  padding: 5px; 
+  background-color: rgba(26, 143, 226, 0.35);
+  padding: 5px;
   border-radius: 40px;
   padding-right: 5px;
   padding-left: 5px;
